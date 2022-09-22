@@ -1,7 +1,7 @@
 INSERT INTO users (name, email, password) 
-VALUES ('Ima Pancake', 'zooby@ooby.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
-('Yuri Burrito', 'zilly@ooby.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
-('Issa Taco', 'taccyy@ooby.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
+VALUES ('mcdonald', 'mc@donald.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+('kfc', 'kfc@chicken.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+('pizzapizza', 'pizza@pizza.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
 
 INSERT INTO properties (
   owner_id, 
@@ -18,21 +18,21 @@ INSERT INTO properties (
   province,
   post_code,
   active) 
-VALUES (1, 'BeetFarm', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5156010/', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5156010/',
-100, 2, 1, 4, 'Canada', 'Ocean Ave', 'Lyon', 'AB', '45f24e', TRUE),
-(3, 'CarrotCatFarm', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5156010/', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5156010/',
-180, 4, 4, 2, 'Canada', 'Mewo street', 'FIBBY', 'AB', '45624e', TRUE),
-(2, 'Econolodge', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5156010/', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5156010/',
-10, 0, 1, 1, 'Canada', 'Silky Ave', 'Keevy', 'AB', '77f24e', TRUE);
+VALUES (1, 'Super Hotel', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5166610/', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5156010/',
+21, 3, 1, 2, 'Canada', 'Soft Ave', 'lin', 'BC', 'L4C2D3', TRUE),
+(2, 'Appleby Farm', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5166710/', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5156010/',
+22, 4, 1, 2, 'Canada', 'Milk street', 'cun', 'BC', 'L7C6J2', TRUE),
+(3, 'Banana Farm', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5166810/', 'https://www.pexels.com/photo/white-and-brown-concrete-building-5156010/',
+23, 2, 2, 1, 'Canada', 'Cook Ave', 'van', 'BC', 'C5C2J3', FALSE);
 
 
 INSERT INTO reservations (start_date, end_date, property_id, guest_id) 
-VALUES ('2018-09-11', '2018-09-26', 1, 1),
-('2019-01-04', '2019-02-01', 2, 2),
-('2021-10-01', '2021-10-14', 3, 3);
+VALUES ('2018-09-11', '2018-09-26', 2, 3),
+('2019-01-04', '2019-02-01', 1, 2),
+('2021-10-01', '2021-10-14', 2, 1);
 
 
 INSERT INTO property_reviews (guest_id, property_id, reservation_id, rating, message) 
-VALUES (3, 3, 1, 5, 'super-duper'),
-(2, 2, 3, 4, 'Ehhh'),
-(2, 1, 2, 2, 'wompwmpmwompppp');
+VALUES (3, 2, 1, 3, 'message'),
+(2, 2, 3, 5, 'message'),
+(2, 1, 2, 3, 'message');
