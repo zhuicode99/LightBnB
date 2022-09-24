@@ -142,7 +142,7 @@ const getAllProperties = function (options, limit = 10) {
     queryParams.push(`${options.maximum_price_per_night}`);
     queryString += `${queryParams.length > 1 ? 'AND' : 'WHERE'} cost_per_night <= $${queryParams.length} `;
   }
-  
+  //cost_per_night is in cents, not dollar
   if (options.minimum_rating) {
 		queryParams.push(`${options.minimum_rating}`);
 		queryString += `GROUP BY properties.id HAVING avg(property_reviews.rating) >= $${queryParams.length} `;
@@ -152,7 +152,6 @@ const getAllProperties = function (options, limit = 10) {
 
   queryParams.push(limit);
   queryString += `
-  GROUP BY properties.id
   ORDER BY cost_per_night
   LIMIT $${queryParams.length};
   `;
